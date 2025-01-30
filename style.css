@@ -22,13 +22,6 @@ nav {
     text-align: center;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 5px;
-}
-
 section {
     background-color: white;
     margin: 20px;
