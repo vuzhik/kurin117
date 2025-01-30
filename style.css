@@ -1,60 +1,105 @@
+/* Загальні стилі для всіх елементів */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Стилі для тіла сторінки */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Arial', sans-serif;  /* Встановлення шрифта */
+    background-color: #f4f4f9;        /* Світлий фон */
+    color: #333;                      /* Темний колір тексту */
 }
 
-header, footer {
-    background-color: #3f4a58;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* Контейнер для основного контенту */
+.container {
+    width: 90%;
+    max-width: 1200px;   /* Обмеження максимальної ширини */
+    margin: 0 auto;      /* Центрування контейнера */
 }
 
+/* Стилі для шапки сайту */
+header {
+    background-color: #3f4a58;   /* Темно-синій фон */
+    color: white;                /* Білий текст */
+    padding: 20px 0;             /* Відступи по вертикалі */
+    text-align: center;          /* Вирівнювання тексту по центру */
+}
+
+/* Навігаційне меню */
 nav {
-    background-color: #444;
-    text-align: center;
+    background-color: #444;      /* Темний фон */
+    padding: 10px 0;             /* Відступи по вертикалі */
+    text-align: center;          /* Вирівнювання посилань по центру */
 }
 
+/* Стилі для посилань у меню */
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 5px;
+    color: white;                /* Білий колір тексту */
+    text-decoration: none;       /* Відсутність підкреслення */
+    margin: 0 15px;              /* Відстань між посиланнями */
+    font-size: 18px;             /* Розмір шрифта */
+    padding: 5px 10px;           /* Внутрішні відступи */
 }
 
+/* Стиль для при наведенні на посилання */
 nav a:hover {
-    background-color: #555;
+    background-color: #555;      /* Світліший фон при наведенні */
+    border-radius: 4px;          /* Закруглені кути */
 }
 
-section {
-    background-color: white;
-    margin: 20px;
-    padding: 20px;
-}
-
-section h2 {
-    font-size: 1.8rem;
-}
-
-.img-container img {
-    max-width: 100%;
-    height: auto;
-}
-
+/* Футер */
 footer {
-    margin-top: 20px;
+    background-color: #333;      /* Темний фон */
+    color: white;                /* Білий текст */
+    padding: 20px 0;             /* Відступи по вертикалі */
+    text-align: center;          /* Вирівнювання тексту по центру */
+    margin-top: 50px;            /* Відступ зверху */
 }
 
+/* Стиль для розділів контенту */
+section {
+    background-color: white;     /* Білий фон для розділів */
+    padding: 40px 0;             /* Відступи по вертикалі */
+    margin: 20px 0;              /* Відступи між розділами */
+    border-radius: 8px;          /* Закруглені кути */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легка тінь */
+}
+
+/* Стиль для заголовків в секціях */
+section h2 {
+    font-size: 2rem;             /* Великий розмір заголовка */
+    margin-bottom: 20px;         /* Відступи знизу */
+}
+
+/* Стиль для зображень */
+.img-container img {
+    max-width: 100%;             /* Ширина зображення не більше 100% */
+    height: auto;                /* Пропорційна висота */
+    border-radius: 8px;          /* Закруглені кути */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь */
+}
+
+/* Стилі для списків */
+ul {
+    list-style: none;            /* Відключення маркерів списку */
+}
+
+ul li {
+    margin-bottom: 30px;         /* Відступи між елементами списку */
+}
+
+/* Стиль для підзаголовків */
+h3 {
+    font-size: 1.6rem;           /* Розмір шрифта для підзаголовків */
+    color: #3f4a58;              /* Темно-синій колір */
+}
+
+/* Медіа-запит для мобільних пристроїв */
 @media (max-width: 768px) {
     nav a {
-        display: block;
-        margin: 10px 0;
+        display: block;           /* Перехід на блочний формат для посилань */
+        margin: 10px 0;           /* Відстань між посиланнями */
     }
 }
