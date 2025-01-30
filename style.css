@@ -22,11 +22,6 @@ nav {
     text-align: center;
 }
 
-section {
-    background-color: white;
-    margin: 20px;
-    padding: 20px;
-}
 ###Скопіював###
 @media (max-width: 768px) {
     nav a {
