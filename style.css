@@ -39,19 +39,6 @@ section {
     padding: 20px;
 }
 
-section h2 {
-    font-size: 1.8rem;
-}
-
-.img-container img {
-    max-width: 100%;
-    height: auto;
-}
-
-footer {
-    margin-top: 20px;
-}
-
 @media (max-width: 768px) {
     nav a {
         display: block;
