@@ -38,6 +38,7 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             margin-bottom: 20px;
+            display: none;
         }
         .img-container {
             text-align: center;
@@ -50,6 +51,9 @@
             color: white;
             margin-top: 40px;
         }
+        .active {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -57,24 +61,32 @@
         <h1>Курінь 117 ім. Івана Чмоли</h1>
     </header>
     <nav>
-        <a href="index.html">Головна</a> | 
-        <a href="history.html">Історія</a> | 
-        <a href="achievements.html">Досягнення</a> | 
-        <a href="posts.html">Дописи</a>
+        <a href="javascript:void(0);" onclick="showSection('home')">Головна</a> | 
+        <a href="javascript:void(0);" onclick="showSection('history')">Історія</a> | 
+        <a href="javascript:void(0);" onclick="showSection('achievements')">Досягнення</a> | 
+        <a href="javascript:void(0);" onclick="showSection('posts')">Дописи</a>
     </nav>
     <div class="container">
-        <div class="content-section">
+        <!-- Головна -->
+        <div class="content-section" id="home">
+            <h2>Ласкаво просимо до Куреня!</h2>
+            <p>Наш курінь 117 ім. Івана Чмоли — це спільнота молодих людей, які поєднують військову дисципліну з пластовими традиціями.</p>
+        </div>
+        <!-- Історія -->
+        <div class="content-section" id="history">
             <h2>Історія Куреня</h2>
             <p>Курінь 117 ім. Івана Чмоли був заснований у 2017 році трьома однодумцями: Романом Трухіним, Ростиславом Антимисом та Кравцем Остапом. Метою їх створення було поєднання військової спеціалізації та пластунської діяльності.</p>
             <div class="img-container">
                 <img src="kurin-photo.jpg" alt="Групове фото куреня" style="width:80%; height:auto;">
             </div>
         </div>
-        <div class="content-section">
+        <!-- Досягнення -->
+        <div class="content-section" id="achievements">
             <h2>Досягнення</h2>
             <p>Ми пишаємось своїми успіхами у таборуванні, мандрівках та змаганнях.</p>
         </div>
-        <div class="content-section">
+        <!-- Дописи -->
+        <div class="content-section" id="posts">
             <h2>Дописи</h2>
             <p>Тут з'являтимуться новини та цікаві історії з життя куреня.</p>
         </div>
@@ -82,5 +94,21 @@
     <footer>
         <p>© 2025 Курінь 117 ім. Івана Чмоли</p>
     </footer>
+
+    <script>
+        // Функція для перемикання між секціями
+        function showSection(sectionId) {
+            // Спочатку сховати всі секції
+            var sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            // Показати обрану секцію
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // За замовчуванням відображати головну секцію
+        showSection('home');
+    </script>
 </body>
 </html>
